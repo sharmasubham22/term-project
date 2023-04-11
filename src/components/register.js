@@ -35,10 +35,10 @@ let navigate=useNavigate();
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Grid container spacing={2}>
-        <Grid item sx={{margin:"auto"}}>
+        <Grid item sx={{ margin: "auto" }}>
           <img src={clogo} alt="logo" width="200px" />
         </Grid>
-        <Grid item >
+        <Grid item>
           <Box
             sx={{
               marginTop: 4,
@@ -110,7 +110,12 @@ let navigate=useNavigate();
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link href="/login" variant="body2">
+                  <Link
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                    variant="body2"
+                  >
                     Already have an account? Sign in
                   </Link>
                 </Grid>

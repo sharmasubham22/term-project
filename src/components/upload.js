@@ -117,9 +117,6 @@ React.useEffect(() => {
           Something went wrong, <strong>please try again</strong>
         </Alert>
       )}
-      {/* <button type="submit" onClick={fetchFilesFromS3} className="upload-btn">
-        Get Files
-      </button> */}
       <br />
       <div
         style={{
@@ -128,7 +125,6 @@ React.useEffect(() => {
       >
         {files.map((file, index) => (
           <a
-            // href={file}
             onClick={() => {
               navigate("/details", {
                 state: { file: file },

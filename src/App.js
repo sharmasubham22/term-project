@@ -9,8 +9,8 @@ import Details from './components/details';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Register />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/" element={<Login />} />
       <Route path="/verifyemail" element={<Verify />} />
       <Route path="/home" element={<Upload />} />
       <Route path="/details" element={<Details />} />
