@@ -1,0 +1,40 @@
+.grid-container2 {
+  position: static;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-column-gap: 5%;
+  grid-template-areas: 'content1 content2';
+  padding-top: 10%;                   
+}
+
+.grid-item-01{
+  grid-area: content1;
+  margin: auto;
+}
+.grid-item-02 {
+  grid-area: content2;
+  
+}
+
+.execute-btn{
+    padding: 10px 20px;
+    background-color: #2979ff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.5s ease;
+    width:20%;
+}
+
+.execute-btn:hover{
+    background-color: #1c54b2;
+}
+
+.image-display{
+     border:1em solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin: 5px;
+    transition: 0.5s ease;
+    width: 350px;
+}
