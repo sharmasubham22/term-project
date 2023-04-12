@@ -11,10 +11,10 @@ function Upload() {
  const [messageToDisplay, setmessageToDisplay] = useState(false);
  const [errmessage, setErrmsg] = useState(false);
     const s3 = new AWS.S3({
-      accessKeyId: "ASIAUHDWUCHJBLFAWOKL",
-      secretAccessKey: "Raai6PEPNfCHUbSFsnwSg4QKzMd5U1uB4IY8EjID",
+      accessKeyId: "ASIAUHDWUCHJI2QZNPE3",
+      secretAccessKey: "rvRRCZQcKMmZjIwSnY2Ptux2ivwrVs0sMfw/DZeL",
       sessionToken:
-        "FwoGZXIvYXdzEOr//////////wEaDNCmasUbREUnWY5ZFiLAAV91+mDXrWDvSMTdqtBg2CbDs56zjNfGWPHNV8cW+TgYXSMx0TDXl070agPKn1YDnRzP6QVqgkH2FKEkZ5mZ7AxnOMq9s6/Rh8pArB3IcVWrZEmyf2YzAbKyng+XgVNMyLKlyIZ4DP2Me+CVz5Q73crynPy+gEWUXhuKR1HulNzbzRPZvei2rtNEOirVXLFI8vwsoqJaaj/8gAJAiAOgsOai42EkVGNPLb8lzvEPaDdjhhAuHIpTo0EUF7AtgMvnpyj4v9uhBjItCuVaBUBpfJ5JOpZ7yVTzWh6DoF7o0epxcq5m69ImLceg9a6qk3AXJuHu0dtN",
+        "FwoGZXIvYXdzEPH//////////wEaDKtv2xO3SP4Sz9vtUiLAASLKKzSRjFxh9kLrY+29YuhfX/W16LaK3ldnuGI1QWvOvpyKUa8TE0XK8zHTRWpchWhKpGevqIwmtc/7vzXYRvKBrb1ugOkr6lTT/C71yue6QFcMRfHgxC1nH6A4SSm2Gm5+IcXMLJfxbaRjVsZh1OMgVw9w0hZ+qEiAPV3fGRAYI5xDkZGrcOE85ZGlgCquheNfs6ho/+gXvhrEyCeeNOmbvgqroo0Vz+2FERAgdOxdU+kspc3ftZJyBvV3UV10LCiEhd2hBjItiME4zDRmeg3DNx+PPQIzNjnc4xGhRhNpsdrVkvJNTvbvTnL6w6kI5DMWzxUp",
       region: "us-east-1",
       logging: true,
     });
@@ -77,7 +77,7 @@ const fetchFilesFromS3 = async () => {
 };
 
 React.useEffect(() => {
-  fetchFilesFromS3();
+  // fetchFilesFromS3();
 }, []);
 
   return (
@@ -104,6 +104,9 @@ React.useEffect(() => {
       ></input>
       <Button variant="contained" type="submit" onClick={FileUpload}>
         Upload
+      </Button>
+      <Button variant="contained" type="submit" sx={{mt:2}} onClick={fetchFilesFromS3}>
+        Get Images
       </Button>
       {messageToDisplay && (
         <Alert severity="success" sx={{ my: 5 }}>
