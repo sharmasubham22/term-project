@@ -23,21 +23,23 @@ function Details() {
         }
         
         const lambda = async (event) => {
-           axios.post("https://x6hqms7ftqagukykvzw4o35uoe0fptzp.lambda-url.us-east-1.on.aws/",
-           dataToSend)
-           .then((res) => {
+           axios
+             .post(
+               "https://x6hqms7ftqagukykvzw4o35uoe0fptzp.lambda-url.us-east-1.on.aws/",
+               dataToSend
+             )
+             .then((res) => {
                console.log(res.data);
                const arrlabels = [];
-               const objects=res.data.body.Labels
-                for (let i = 0; i < objects.length; i++) {
-               console.log(res.data.body.Labels[i].Name)
-               const lname = res.data.body.Labels[i].Name;
-               arrlabels.push(lname);
-               
-                }
+               const objects = res.data.body.Labels;
+               for (let i = 0; i < objects.length; i++) {
+                 console.log(res.data.body.Labels[i].Name);
+                 const lname = res.data.body.Labels[i].Name;
+                 arrlabels.push(lname);
+               }
 
-                setLabels(arrlabels);
-                // console.log(labels);
+               setLabels(arrlabels);
+               // console.log(labels);
              })
              .catch((error) => {
                console.log(error);

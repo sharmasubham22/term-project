@@ -11,10 +11,10 @@ function Upload() {
  const [messageToDisplay, setmessageToDisplay] = useState(false);
  const [errmessage, setErrmsg] = useState(false);
     const s3 = new AWS.S3({
-      accessKeyId: "ASIAUHDWUCHJBBGQHOFW",
-      secretAccessKey: "ZZiyafaHg2h7iABjdV1dVsN2RSl7Lpnf/y4pHMTP",
+      accessKeyId: "ASIAUHDWUCHJBLFAWOKL",
+      secretAccessKey: "Raai6PEPNfCHUbSFsnwSg4QKzMd5U1uB4IY8EjID",
       sessionToken:
-        "FwoGZXIvYXdzELz//////////wEaDI4JkfxxAcXJrXeAqyLAAQnY/wlftCPp1rCUAi74hJxQ/Z0zxy26WD5B42pjx5o/5qgvUwQEbvCza1cS0ZaiOWzJ/xRhZ+YVCgOJ+Tu4U3E6qXWhsTuT4Q4cdd1gSXDgppJzPWrAi4a4Z+IHi7o8MTDTOGj1wJcpmAeoI4TK1S2nI2stz68FI4T4m9X/upQ5YlB2oqRUPwrEazetQSkcbIl5YdBzOvMEKvm7gRw5+bn25Z4ec5Rv2ofpn2IaivTfVs3aTphlR/hzt8GU3iiZwiiatdGhBjItd8JUO3Px1Eyt8u0IZg0yD4gmO8ylXgqQ1F4kuaaNVLsIWJ7DvXox1e8K/Xov",
+        "FwoGZXIvYXdzEOr//////////wEaDNCmasUbREUnWY5ZFiLAAV91+mDXrWDvSMTdqtBg2CbDs56zjNfGWPHNV8cW+TgYXSMx0TDXl070agPKn1YDnRzP6QVqgkH2FKEkZ5mZ7AxnOMq9s6/Rh8pArB3IcVWrZEmyf2YzAbKyng+XgVNMyLKlyIZ4DP2Me+CVz5Q73crynPy+gEWUXhuKR1HulNzbzRPZvei2rtNEOirVXLFI8vwsoqJaaj/8gAJAiAOgsOai42EkVGNPLb8lzvEPaDdjhhAuHIpTo0EUF7AtgMvnpyj4v9uhBjItCuVaBUBpfJ5JOpZ7yVTzWh6DoF7o0epxcq5m69ImLceg9a6qk3AXJuHu0dtN",
       region: "us-east-1",
       logging: true,
     });
