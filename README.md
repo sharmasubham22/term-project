@@ -1,4 +1,4 @@
-# Find My Labels
+# Find the Labels
 
 “Find the Labels” is an image storage and analysis system which can store images in a database, display the images in a gallery format and then detect the labels which can be found in an image selected by the user based on the confidence level they select.
   
